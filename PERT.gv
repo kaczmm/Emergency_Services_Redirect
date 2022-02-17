@@ -1,0 +1,41 @@
+digraph ESRedirect 
+{
+   /*
+      Define the Checkpoint and ETA
+   */
+   1 [ shape=box label="Checkpoint 1\n------------------\nSTART\n------------------\nSept 10, 2018" ] 
+   2 [ shape=box label="Checkpoint 2\n------------------\n4 hours\n------------------\nSept 29, 2018" ] 
+   3 [ shape=box label="Checkpoint 3\n------------------\n8 hours\n------------------\nNov 1, 2018" ]
+   4 [ shape=box label="Checkpoint 4\n------------------\n10 hours\n------------------\nDec 3, 2018" ]
+   5 [ shape=box label="Checkpoint 5\n------------------\n3 hours\n------------------\nDec 21, 2018" ]
+   6 [ shape=box label="Checkpoint 6\n------------------\n6 hours\n------------------\nDec 25, 2018" ]
+   7 [ shape=box label="Checkpoint 7\n------------------\n3 hours\n------------------\nDec 29, 2018" ]
+   8 [ shape=box label="Checkpoint 8\n------------------\n6 hours\n------------------\nJan 3, 2018" ]
+   9 [ shape=box label="Checkpoint 9\n------------------\n12 hours\n------------------\nJan 17, 2018" ]
+   10 [ shape=box label="Checkpoint 10\n------------------\n8 hours\n------------------\nJan 31, 2018" ]
+   11 [ shape=box label="Checkpoint 11\n------------------\n10 hours\n------------------\nFeb 14, 2018" ]
+   12 [ shape=box label="Checkpoint 12\n------------------\n6 hours\n------------------\nFeb 28, 2018" ]
+   13 [ shape=box label="Checkpoint 13\n------------------\n8 hours\n------------------\nMarch 14, 2018" ]
+   14 [ shape=box label="Checkpoint 14\n------------------\n12 hours\n------------------\nApril, 2018" ]
+
+   /*
+      Link the checkpoints together with an task
+   */
+	1 -> 2 [ label=" Project Proposal " ]
+	2 -> 3 [ label=" Information Gathering " ]
+	3 -> 4 [ label=" Poster Approval" ]
+	4 -> 6 [ label=" Collect Tweets " ]
+	3 -> 5 [ label=" Generate Dataset " ]
+	3 -> 7 [ label=" Initial PERT chart " ]
+	5 -> 8 [ label=" Generate Threshold" ]
+	5 -> 8 [ label=" Input Dataset " ]
+	8 -> 9 [ label=" Implement Algorithm " ]
+	9 -> 10 [ label=" Monte Carlo Simulation " ]
+	10 -> 11 [ label=" Generate Availability Table " ]
+	10 -> 11 [ label=" Generate Tokens " ]
+	11 -> 12 [ label=" Output Results " ]
+	6 -> 10 [ label=" OnBoarding " ]
+	12 -> 13 [ label=" Create User Interface " ]
+	13 -> 14 [ label=" Final Report " ] 
+	13 -> 14 [ label=" Presentation " ]
+}
